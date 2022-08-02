@@ -8,7 +8,6 @@ import java.util.List;
 
 @Repository
 public class PersonDAOEntityManagerImpl implements PersonDAO {
-    private static int PEOPLE_COUNT;
     private List<Person> people;
 
     {
@@ -24,7 +23,7 @@ public class PersonDAOEntityManagerImpl implements PersonDAO {
     }
 
     public void save(Person person) {
-        person.setId(++PEOPLE_COUNT);
+        person.setId(person.getId());
         people.add(person);
     }
 
