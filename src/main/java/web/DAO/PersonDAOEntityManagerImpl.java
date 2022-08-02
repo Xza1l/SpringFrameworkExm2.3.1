@@ -3,8 +3,6 @@ package web.DAO;
 import org.springframework.stereotype.Repository;
 import web.Model.Person;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +13,6 @@ public class PersonDAOEntityManagerImpl implements PersonDAO {
 
     {
         people = new ArrayList<>();
-
     }
 
     public List<Person> index() {

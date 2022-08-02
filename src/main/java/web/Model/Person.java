@@ -14,12 +14,16 @@ public class Person {
     @Column(name = "surname")
     private String surname;
 
+    @Column(name = "age")
+    private int age;
+
     public Person() {
     }
 
-    public Person(String name, String surname) {
+    public Person(String name, String surname, int age) {
         this.name = name;
         this.surname = surname;
+        this.age = age;
     }
 
     public int getId() {
@@ -28,6 +32,14 @@ public class Person {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public String getName() {
